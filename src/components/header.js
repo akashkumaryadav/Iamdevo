@@ -24,43 +24,27 @@ const Navlink = styled(AniLink)`
 const Header = () => {
   let transite = false
   return (
-    <header
-      css={css`
-        background-color: #663399;
-        border-bottom: 1px solid #ddd;
-        display: flex;
-        justify-content: space-between;
-        padding: 0.5rem calc((100vw - 700px - 0.5rem) / 2);
-        margin: 0;
-        transform: translateY(${transite ? "-50vh" : "0"});
-        transition: transform 800ms linear;
-      `}
-    >
-      <Navlink
-        paintDrip
-        hex="#663399"
-        duration={0.6}
-        to="/"
+    <nav className="flex p-5 bg-red-400 text-gray-800 justify-between">
+      <header
+        className="text-xl"
         css={css`
-          font-family: "Pacifico", Arial, Helvetica, sans-serif;
-          font-size: 1.2rem;
+          font-family: "pacifico";
         `}
       >
         Iamdevo
-      </Navlink>
-      <nav
-        css={css`
-          margin-top: 0;
-        `}
-      >
-        <Navlink cover to="/">
+      </header>
+      <ul className="space-x-5">
+        <Link activeClassName="border-b-2 border-gray-700" to="/">
+          Home
+        </Link>
+        <Link activeClassName="border-b-2 border-gray-700" to="/blog">
           Blog
-        </Navlink>
-        <Navlink swipe direction="left" top="exit" to="/about" duration={0.6}>
+        </Link>
+        <Link activeClassName="border-b-2 border-gray-700" to="/about">
           About
-        </Navlink>
-      </nav>
-    </header>
+        </Link>
+      </ul>
+    </nav>
   )
 }
 

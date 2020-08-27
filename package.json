@@ -30,20 +30,26 @@
     "react-ripples": "^2.2.1"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "prettier": "2.0.5",
+    "tailwindcss": "^1.7.3"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "npm run build:css && gatsby build",
+    "develop": "npm run watch:css && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "build:css":"postcss src/assets/styles/tailwind.css -o src/assets/styles/main.css",
+    "watch:css":"postcss src/assets/styles/tailwind.css -o src/assets/styles/main.css"
   },
   "repository": {
     "type": "git",

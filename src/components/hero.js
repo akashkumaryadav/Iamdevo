@@ -8,7 +8,8 @@ const ImageBackground = styled(BackgroundImage)`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 20% center;
-  height: 50vh;
+  background-attachment: fixed;
+  height: 100vh;
   + * {
     margin-top: 0;
   }
@@ -28,7 +29,6 @@ const HeroText = styled("div")`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 calc((100vw - 500px) / 2) 2rem;
   text-align: center;
   justify-content: center;
   margin: 0;
