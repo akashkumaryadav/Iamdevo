@@ -6,9 +6,8 @@ import AnyLink from "gatsby-plugin-transition-link/AniLink"
 
 const PostPreview = ({ post }) => {
   const { title, author, excerpt, slug, image } = post
-  console.log(image)
   return (
-    <article className="flex-col justify-between m-5 shadow-lg rounded-sm p-4 space-y-2">
+    <article className="flex-col justify-between m-5 shadow-lg rounded-sm p-2 space-y-2">
       <h1 className="text-xl font-bold">{title}</h1>
       <Image
         css={css`

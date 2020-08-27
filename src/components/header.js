@@ -37,7 +37,7 @@ const Header = () => {
         <Link activeClassName="border-b-2 border-gray-700" to="/">
           Home
         </Link>
-        <Link activeClassName="border-b-2 border-gray-700" to="/blog">
+        <Link activeClassName="border-b-2 border-gray-700" to="/blogs">
           Blog
         </Link>
         <Link activeClassName="border-b-2 border-gray-700" to="/about">

@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
         <meta name="description" content={description} />
       </Helmet>
       <Header />
-      <main>{children}</main>
+      <main className="p-2">{children}</main>
     </>
   )
 }
