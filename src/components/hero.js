@@ -62,7 +62,7 @@ const HeroText = styled("div")`
 function Hero() {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "roadToHeaven.jpg" }) {
+      image: file(relativePath: { eq: "breathingLeaves.jpg" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp

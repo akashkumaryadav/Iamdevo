@@ -50,7 +50,7 @@ const Header = () => {
           className="pr-1"
           to="/about"
         >
-          About <i class="fas fa-address-card"></i>
+          About <i className="fas fa-address-card"></i>
         </Link>
       </ul>
     </nav>

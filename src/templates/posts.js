@@ -8,12 +8,14 @@ import { Mdxlayout } from "../components/Mdxlayout"
 
 export const query = graphql`
   query($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        author
+    contentfulBlog(slug: { eq: $slug }) {
+      title
+      slug
+      childContentfulBlogDescriptionTextNode {
+        childMdx {
+          body
+        }
       }
-      body
     }
   }
 `
@@ -22,9 +24,14 @@ const Post = ({ data }) => {
     <Layout>
       <Mdxlayout>
         <h1 className="text-xl p-2 font-bold font-mono">
-          {data.mdx.frontmatter.title}
+          {data.contentfulBlog.title}
         </h1>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <MDXRenderer>
+          {
+            data.contentfulBlog.childContentfulBlogDescriptionTextNode.childMdx
+              .body
+          }
+        </MDXRenderer>
         <Link
           className="bg-blue-900 py-1 px-2 
         text-center

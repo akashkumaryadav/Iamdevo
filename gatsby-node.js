@@ -1,9 +1,10 @@
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query {
-      allMdx {
-        nodes {
-          frontmatter {
+      allContentfulBlog {
+        edges {
+          node {
+            title
             slug
           }
         }
@@ -14,13 +15,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (result.errors) {
     reporter.panic("Failed to create a page", result.errors)
   }
-  const posts = result.data.allMdx.nodes
+  const posts = result.data.allContentfulBlog.edges
   posts.forEach(post => {
     actions.createPage({
-      path: post.frontmatter.slug,
+      path: `/blogs/${post.node.slug}`,
       component: require.resolve("./src/templates/posts.js"),
       context: {
-        slug: post.frontmatter.slug,
+        slug: post.node.slug,
       },
     })
   })

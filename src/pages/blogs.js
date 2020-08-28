@@ -12,13 +12,15 @@ const Blogs = () => {
   return (
     <Layout>
       <Search posts={posts} filteredpost={setfilterdpost} />
-      {filterdpost !== undefined
-        ? filterdpost.map((post, index) => (
-            <PostPreview post={post} key={post.slug + index} />
-          ))
-        : posts.map((post, index) => (
-            <PostPreview post={post} key={post.slug + index} />
-          ))}
+      <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
+        {filterdpost !== undefined
+          ? filterdpost.map((post, index) => (
+              <PostPreview post={post} key={post.slug + index} />
+            ))
+          : posts.map((post, index) => (
+              <PostPreview post={post} key={post.slug + index} />
+            ))}
+      </div>
     </Layout>
   )
 }

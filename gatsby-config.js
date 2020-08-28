@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Iamdevo",
@@ -31,6 +35,13 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/src/pages/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
       },
     },
   ],

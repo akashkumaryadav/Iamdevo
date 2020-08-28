@@ -22241,8 +22241,6 @@ video {
           animation: bounce 1s infinite;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -108590,3 +108588,5 @@ video {
             animation: bounce 1s infinite;
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");

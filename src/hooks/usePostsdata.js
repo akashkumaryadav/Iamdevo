@@ -3,34 +3,34 @@ import { graphql, useStaticQuery } from "gatsby"
 const usePostsdata = () => {
   const data = useStaticQuery(graphql`
     {
-      allMdx {
-        nodes {
-          frontmatter {
+      allContentfulBlog {
+        edges {
+          node {
             title
             slug
-            author
             tags
-            image {
-              sharp: childImageSharp {
-                fluid(maxWidth: 100, maxHeight: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+            description {
+              childMdx {
+                excerpt
+              }
+            }
+            blogImage {
+              fluid {
+                srcSetWebp
               }
             }
           }
-          excerpt
         }
       }
     }
   `)
 
-  return data.allMdx.nodes.map(post => ({
-    title: post.frontmatter.title,
-    slug: post.frontmatter.slug,
-    author: post.frontmatter.author,
-    excerpt: post.excerpt,
-    image: post.frontmatter.image,
-    tags: post.frontmatter.tags,
+  return data.allContentfulBlog.edges.map(post => ({
+    title: post.node.title,
+    slug: post.node.slug,
+    excerpt: post.node.description.childMdx.excerpt,
+    image: post.node.blogImage,
+    tags: post.node.tags,
   }))
 }
 

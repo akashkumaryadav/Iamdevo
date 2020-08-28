@@ -16,13 +16,13 @@ const PostPreview = ({ post }) => {
           margin: auto;
         `}
         Tag="section"
-        fluid={image.sharp.fluid}
+        fluid={image.fluid}
         fadeIn={true}
       />
       <p className="pb-2">{excerpt}</p>
       <Link
         className="text-white no-underline bg-blue-900 rounded-md py-1 px-2 "
-        to={`/${slug}`}
+        to={`/blogs/${slug}`}
       >
         Read More <i class="fab fa-readme"></i>
       </Link>
