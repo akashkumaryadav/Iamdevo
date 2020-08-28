@@ -14,6 +14,7 @@ export default () => {
   return (
     // parent Base component to manage globel styling
     <>
+      <Hero />
       {/*TODO: displaying the recent posts */}
       <Blogs />
     </>

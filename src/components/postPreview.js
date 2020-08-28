@@ -24,7 +24,7 @@ const PostPreview = ({ post }) => {
         className="text-white no-underline bg-blue-900 rounded-md py-1 px-2 "
         to={`/${slug}`}
       >
-        Read More
+        Read More <i class="fab fa-readme"></i>
       </Link>
     </article>
   )

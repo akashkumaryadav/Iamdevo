@@ -9,7 +9,7 @@ const searchform = css`
     margin: 0 auto 2rem auto;
     padding: 0.2rem;
     border: none;
-    border-bottom: 5px solid rebeccapurple;
+    border-bottom: 5px solid rgba(66, 66, 66, 1);
     outline: none;
     width: 100%;
     height: 100%;
@@ -17,7 +17,7 @@ const searchform = css`
     font-size: 2rem;
     &::placeholder {
       font-size: 1rem;
-      color: rebeccapurple;
+      color: rgba(66, 66, 66, 1);
       opacity: 0.8;
     }
   }

@@ -63,14 +63,20 @@ export function Mdxlayout({ children }) {
         }
         pre {
           display: flex;
-          overflow: auto;
+          overflow: scroll;
         }
         a[target="_blank"] {
           font-size: 0.8rem;
-          background-color: rgba(241, 130, 141, 1);
+          color: white;
+          background-color: rgba(66, 66, 66, 1);
           padding: 18px 36px;
           border-radius: 2px;
           margin: 2rem;
+          @media (max-width: 400px) {
+            max-width: 240px;
+            font-size: 0.7rem;
+            padding: 3px 10px;
+          }
         }
 
         p {

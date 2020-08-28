@@ -24,7 +24,12 @@ const Navlink = styled(AniLink)`
 const Header = () => {
   let transite = false
   return (
-    <nav className="flex p-5 bg-red-400 text-gray-800 justify-between">
+    <nav
+      className="flex p-5 bg-gray-800 text-white justify-between"
+      css={css`
+        padding: 1.25rem calc((100vw - 768px) / 2);
+      `}
+    >
       <header
         className="text-xl"
         css={css`
@@ -34,14 +39,18 @@ const Header = () => {
         Iamdevo
       </header>
       <ul className="space-x-5">
-        <Link activeClassName="border-b-2 border-gray-700" to="/">
-          Home
+        <Link activeClassName="border-b-2 border-white pb-6" to="/">
+          Home <i className="fas fa-home"></i>
         </Link>
-        <Link activeClassName="border-b-2 border-gray-700" to="/blogs">
-          Blog
+        <Link activeClassName="border-b-2 border-white  pb-6" to="/blogs">
+          Blog <i className="fas fa-rss"></i>
         </Link>
-        <Link activeClassName="border-b-2 border-gray-700" to="/about">
-          About
+        <Link
+          activeClassName="border-b-2 border-white  pb-6"
+          className="pr-1"
+          to="/about"
+        >
+          About <i class="fas fa-address-card"></i>
         </Link>
       </ul>
     </nav>

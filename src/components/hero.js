@@ -1,15 +1,16 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Quotes from "./quotes"
+import { css } from "@emotion/core"
 
 const ImageBackground = styled(BackgroundImage)`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 20% center;
   background-attachment: fixed;
-  height: 100vh;
+  height: 50vh;
   + * {
     margin-top: 0;
   }
@@ -61,7 +62,7 @@ const HeroText = styled("div")`
 function Hero() {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "colorfulmountains.jpg" }) {
+      image: file(relativePath: { eq: "roadToHeaven.jpg" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -70,7 +71,6 @@ function Hero() {
       }
     }
   `)
-  console.log(Quotes)
   return (
     <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn>
       <HeroText>
