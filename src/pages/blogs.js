@@ -12,7 +12,7 @@ const Blogs = () => {
   return (
     <Layout>
       <Search posts={posts} filteredpost={setfilterdpost} />
-      <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
+      <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-col">
         {filterdpost !== undefined
           ? filterdpost.map((post, index) => (
               <PostPreview post={post} key={post.slug + index} />

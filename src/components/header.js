@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import { css, keyframes } from "@emotion/core"
 import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -21,39 +21,55 @@ const Navlink = styled(AniLink)`
   }
 `
 
+const blink = keyframes`
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+`
+
 const Header = () => {
   let transite = false
   return (
-    <nav
-      className="flex p-5 bg-gray-800 text-white justify-between"
-      css={css`
-        padding: 1.25rem calc((100vw - 768px) / 2);
-      `}
-    >
-      <header
-        className="text-xl"
+    <>
+      <nav
+        className="flex  bg-gray-850 text-gray-100 justify-between border-b-2 border-gray-600"
         css={css`
-          font-family: "pacifico";
+          padding: 1.25rem calc((100vw - 780px) / 2);
         `}
       >
-        Iamdevo
-      </header>
-      <ul className="space-x-5">
-        <Link activeClassName="border-b-2 border-white pb-6" to="/">
-          Home <i className="fas fa-home"></i>
-        </Link>
-        <Link activeClassName="border-b-2 border-white  pb-6" to="/blogs">
-          Blog <i className="fas fa-rss"></i>
-        </Link>
-        <Link
-          activeClassName="border-b-2 border-white  pb-6"
-          className="pr-1"
-          to="/about"
-        >
-          About <i className="fas fa-address-card"></i>
-        </Link>
-      </ul>
-    </nav>
+        <header className="text-xl">
+          <Link
+            to="/"
+            css={css`
+              font-family: "Roboto Condensed", sans-serif;
+            `}
+          >
+            > $ cd /home{" "}
+            <span
+              className="text-green-500"
+              css={css`
+                min-width: 10px;
+                min-height: 15px;
+                background-color: rgba(72, 187, 120, 1);
+                opacity: 1;
+                animation: ${blink} 1s ease infinite;
+              `}
+            >
+              {"_"}
+            </span>
+          </Link>
+        </header>
+        <ul className="space-x-8 pl-4">
+          <Link to="/blogs">/Posts</Link>
+          <Link className="pr-1" to="/about">
+            /About
+          </Link>
+        </ul>
+      </nav>
+    </>
   )
 }
 

@@ -18,6 +18,8 @@ const Layout = ({ children }) => {
             > div {
               margin: 0;
             }
+            background-color: rgba(26, 32, 44, 1);
+            font-family: "Noto sans";
           }
         `}
       />
@@ -31,7 +33,9 @@ const Layout = ({ children }) => {
         <meta name="description" content={description} />
       </Helmet>
       <Header />
-      <main className="p-2 lg:max-w-screen-md m-auto">{children}</main>
+      <main className="p-2 lg:max-w-screen-md m-auto bg-gray-900 text-gray-100 h-screen">
+        {children}
+      </main>
     </>
   )
 }

@@ -9,7 +9,7 @@ const searchform = css`
     margin: 0 auto 2rem auto;
     padding: 0.2rem;
     border: none;
-    border-bottom: 5px solid rgba(66, 66, 66, 1);
+    border-bottom: 2.5px solid whitesmoke;
     outline: none;
     width: 100%;
     height: 100%;
@@ -17,8 +17,9 @@ const searchform = css`
     font-size: 2rem;
     &::placeholder {
       font-size: 1rem;
-      color: rgba(66, 66, 66, 1);
-      opacity: 0.8;
+      text-align: center;
+      color: white;
+      opacity: 0.9;
     }
   }
 `
@@ -41,6 +42,7 @@ const Search = ({ posts, filteredpost }) => {
     <>
       <form css={searchform}>
         <input
+          className="bg-transparent"
           name="search"
           onChange={handleOnChange}
           placeholder="looking for something 🔍"

@@ -49,7 +49,7 @@ export default () => {
           }
         `}
       >
-        <span className="text-sm sm:text-lg lg:text-3xl md:text-2xl text-gray-800 font-semibold">
+        <span className="text-sm sm:text-lg lg:text-3xl md:text-2xl text-gray-400 font-semibold">
           My favorite things do not cost money.
         </span>
         <br />
