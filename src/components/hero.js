@@ -1,85 +1,36 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import Quotes from "./quotes"
 import { css } from "@emotion/core"
 
-const ImageBackground = styled(BackgroundImage)`
-  background-size: cover;
+const heroContainer = css`
+  background: url("https://images.pexels.com/photos/1629998/pexels-photo-1629998.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
-  background-position: top 20% center;
-  background-attachment: fixed;
-  height: 50vh;
-  + * {
-    margin-top: 0;
-  }
-`
-const HeroText = styled("div")`
-  background: linear-gradient(
-    to bottom,
-    rgba(25, 25, 25, 0.2),
-    rgba(25, 25, 25, 0.2),
-    rgba(25, 25, 25, 0.4),
-    rgba(25, 25, 25, 0.5),
-    rgba(25, 25, 25, 0.6),
-    rgba(25, 25, 25, 0.7),
-    rgba(25, 25, 25, 0.8)
-  );
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  background-size: cover;
+  display: grid;
   justify-content: center;
-  margin: 0;
+`
 
-  h1 {
-    color: #ddd;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-  }
-  button {
-    width: 100%;
-    background-color: #663399ff;
-    border: none;
-    padding: 1rem;
-    font-size: 1rem;
-    color: whitesmoke;
-    border-radius: 12px;
-    outline: none;
-  }
-  @media only screen and (max-width: 518px) {
-    padding: 0 calc((100vw - 300px) / 2);
-    h1 {
-      color: #ddd;
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-  }
+const heroText = css`
+  width: 100%;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
 `
 
 function Hero() {
-  const { image } = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "breathingLeaves.jpg" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
   return (
-    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn>
-      <HeroText>
+    <section css={heroContainer}>
+      <div css={heroText}>
         <h1>
-          ALL KNOWLEDGE IS CONNECTED TO ALL OTHER KNOWLEDGE. THE FUN IS IN
-          MAKING THE CONNECTIONS.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          quo.
         </h1>
-      </HeroText>
-    </ImageBackground>
+      </div>
+    </section>
   )
 }
 

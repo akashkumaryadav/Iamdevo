@@ -38,6 +38,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-dev",
+      options: {
+        username: "akashkumaryadav",
+      },
+    },
+    {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
