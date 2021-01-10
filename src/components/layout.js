@@ -26,8 +26,8 @@ const Layout = ({ children }) => {
       </Helmet>
       <div
         className={`${
-          lightTheme ? "theme-light" : "theme-darkest"
-        } max-w-full  min-h-screen bg-primary text-info`}
+          lightTheme ? "theme-lightest" : "theme-darkest"
+        } max-w-full  min-h-screen bg-primary text-primaryText`}
       >
         <AppMenu changeTheme={setLightTheme} currenttheme={lightTheme} />
         {children}

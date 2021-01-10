@@ -1,26 +1,30 @@
 import React, { useEffect, useState } from "react"
-import { css } from "@emotion/core"
+import { css, keyframes } from "@emotion/core"
+import { colors } from "tailwindcss/defaultTheme"
 
 const toglebutton = css`
   .toggle__dot {
-    top: -0.25rem;
     left: -0.25rem;
-    transition: all 0.3s ease-in-out;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    background-position: center;
+    background-image: ${"url(https://img.icons8.com/doodle/48/000000/sun--v1.png)"};
   }
-
   input:checked ~ .toggle__dot {
     transform: translateX(100%);
-    background-color: #30bced;
+    left: -1rem;
+    background-image: ${"url(https://img.icons8.com/plasticine/100/000000/snowy-night.png )"};
   }
 `
 
 const AppMenu = ({ currenttheme, changeTheme }) => {
   return (
     <>
-      <div className="bg-cyan text-primary  dark:bg-primary dark:text-white ">
+      <nav className="sticky bg-primary block  top-0">
         <div className="container p-8 flex justify-between mx-auto">
           <h1
-            className="text-3xl text-info lg:text-4xl"
+            className="text-3xl text-warning lg:text-4xl"
             style={{
               fontFamily: "Pacifico",
             }}
@@ -37,20 +41,16 @@ const AppMenu = ({ currenttheme, changeTheme }) => {
                   type="checkbox"
                   checked={!currenttheme}
                   className="hidden"
-                  onChange={() => changeTheme(!currenttheme)}
-                  onClick={() => changeTheme(!currenttheme)}
+                  onChange={() => changeTheme(() => !currenttheme)}
+                  onClick={() => changeTheme(() => !currenttheme)}
                 />
-                <div className="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
-                <div className="toggle__dot absolute w-6 h-6 bg-white rounded-full shadow inset-y-0 left-0"></div>
-              </div>
-              <div className="ml-3 text-gray-700 font-medium">
-                <p className="text-info text-lg">Theme</p>
+                <div className="w-12 h-8 bg-gray-400 rounded-full shadow-inner"></div>
+                <div className="toggle__dot absolute w-6 h-6 bg-white rounded-full shadow inset-y-0 left-0 text-center mb-2"></div>
               </div>
             </label>
           </div>
         </div>
-      </div>
-      <hr className="border-secondaryPink" />
+      </nav>
     </>
   )
 }

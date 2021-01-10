@@ -6,7 +6,7 @@ const PostPreview = ({ post }) => {
   tags.splice(0, tags.length / 2)
   return (
     <div
-      className={`max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl`}
+      className={`max-w-md mx-auto bg-primary rounded-xl shadow-md overflow-hidden md:max-w-2xl`}
     >
       <div className="md:flex">
         <div className="md:flex-shrink-0">

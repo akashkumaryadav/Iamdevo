@@ -6,31 +6,16 @@ const Skills = () => {
   return (
     <div className="p-8 mt-5">
       <div className="container mx-auto p-8 ">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl">
-          <Typewriter
-            options={{
-              strings: ["Skills"],
-              autoStart: true,
-              delay: 10,
-              pauseFor: 1500,
-              loop: true,
-            }}
-          />
-        </h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl">SKills</h1>
         <FadeIn>
-          <div className="grid grid-cols-4 gap-4  md:grid-cols-5  lg:grid-cols-7 m-5">
+          <div className="grid grid-cols-4 gap-4  md:grid-cols-5  lg:grid-cols-7 m-5 md:p-10">
             <img src="https://img.icons8.com/color/96/26e07f/vue-js.png" />
             <img src="https://img.icons8.com/color/96/26e07f/react-native.png" />
             <img src="https://img.icons8.com/windows/96/26e07f/nodejs.png" />
             <img src="https://img.icons8.com/color/96/26e07f/javascript.png" />
-            <i
-              className="fab fa-html5 text-red-400 dark:text-gray-100"
-              style={{ fontSize: "96px" }}
-            ></i>
-            <i
-              className="fab fa-css3-alt text-blue-200"
-              style={{ fontSize: "96px" }}
-            ></i>
+            <img src="https://img.icons8.com/color/96/000000/html-5.png" />
+
+            <img src="https://img.icons8.com/color/96/000000/css3.png" />
             <img src="https://img.icons8.com/color/96/26e07f/python.png" />
             <img src="https://img.icons8.com/color/96/000000/c-plus-plus-logo.png" />
             <img src="https://img.icons8.com/fluent/96/000000/github.png" />
