@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Wave from "../components/wave"
 import Img from "gatsby-image"
 import { css } from "@emotion/core"
 

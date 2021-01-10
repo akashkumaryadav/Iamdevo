@@ -1,37 +1,37 @@
-import React from "react"
-import { Global, css } from "@emotion/core"
-import Header from "../components/header"
+import React, { useState } from "react"
 import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/siteMetadata"
-import "../assets/styles/main.css"
+
+import "../styles/main.css"
+import AppMenu from "./AppMenu"
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
+  const [lightTheme, setLightTheme] = useState(false)
+
   return (
     <>
-      <Global
-        styles={css`
-          html {
-            scroll-behavior: smooth;
-          }
-          body {
-            > div {
-              margin: 0;
-              background-color: #f7f8f7;
-            }
-          }
-        `}
-      />
+      {/* GLobal styles */}
+      {/*  Header section of the app  */}
       <Helmet>
-        <html lang="en" />
         <title>{title}</title>
-        <script
-          src="https://kit.fontawesome.com/5ad399a984.js"
-          crossorigin="anonymous"
-        ></script>
         <meta name="description" content={description} />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+          integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+          crossorigin="anonymous"
+        ></link>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
       </Helmet>
-      <main>{children}</main>
+      <div
+        className={`${
+          lightTheme ? "theme-light" : "theme-darkest"
+        } max-w-full  min-h-screen bg-primary text-info`}
+      >
+        <AppMenu changeTheme={setLightTheme} currenttheme={lightTheme} />
+        {children}
+      </div>
     </>
   )
 }

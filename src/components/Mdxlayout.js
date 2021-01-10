@@ -1,5 +1,4 @@
 import React from "react"
-import "../assets/styles/main.css"
 import { css } from "@emotion/core"
 export function Mdxlayout({ children }) {
   return (

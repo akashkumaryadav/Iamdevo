@@ -8,6 +8,7 @@ module.exports = {
     description: "a truly opinionated platform for developers",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-transition-link",
