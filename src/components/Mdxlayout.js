@@ -1,9 +1,12 @@
 import React from "react"
 import { css } from "@emotion/core"
+
+import { colors } from "tailwindcss/defaultTheme"
+
 export function Mdxlayout({ children }) {
   return (
     <article
-      className="p-2"
+      className="container mx-auto list-decimal p-2 md:px-8 text-primaryText text-md mt-24 space-y-10"
       css={css`
         h1 {
           font-size: xx-large;
@@ -54,22 +57,23 @@ export function Mdxlayout({ children }) {
         }
 
         li {
-          list-style: upper-roman;
+          list-style: upper-disc;
         }
 
         * + * {
           margin: 1rem;
         }
-        pre {
-          display: flex;
-          overflow: scroll;
-        }
+
         a[target="_blank"] {
-          font-size: 0.8rem;
+          padding: 2px 10px 10px 2px;
+          display: flex;
           color: white;
-          background-color: rgba(66, 66, 66, 1);
-          padding: 18px 36px;
+          justify-content: center;
+          justify-items: center;
+          background-color: ${colors.gray[500]};
+          align-items: center;
           border-radius: 2px;
+          width: 200px;
           margin: 2rem;
           @media (max-width: 400px) {
             max-width: 240px;
@@ -77,11 +81,6 @@ export function Mdxlayout({ children }) {
             padding: 3px 10px;
           }
         }
-
-        p {
-          margin: 1rem;
-        }
-        padding-bottom: 2rem;
       `}
     >
       {children}

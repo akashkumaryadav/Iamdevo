@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       <div
         className={`${
           lightTheme ? "theme-lightest" : "theme-darkest"
-        } max-w-full  min-h-screen bg-primary text-primaryText`}
+        } max-w-full   bg-primary text-primaryText`}
       >
         <AppMenu changeTheme={setLightTheme} currenttheme={lightTheme} />
         {children}

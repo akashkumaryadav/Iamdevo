@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { css, keyframes } from "@emotion/core"
 import { colors } from "tailwindcss/defaultTheme"
+import { Link } from "gatsby"
 
 const toglebutton = css`
   .toggle__dot {
@@ -21,7 +22,7 @@ const toglebutton = css`
 const AppMenu = ({ currenttheme, changeTheme }) => {
   return (
     <>
-      <nav className="sticky bg-primary block  top-0">
+      <nav className="fixed bg-black shadow-2xl block  w-full z-20 top-0">
         <div className="container p-8 flex justify-between mx-auto">
           <h1
             className="text-3xl text-warning lg:text-4xl"
@@ -29,7 +30,7 @@ const AppMenu = ({ currenttheme, changeTheme }) => {
               fontFamily: "Pacifico",
             }}
           >
-            AKY
+            <Link to="/"> AKY</Link>
           </h1>
           <div
             className="flex items-center justify-center float-left"

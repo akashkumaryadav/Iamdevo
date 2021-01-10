@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env`,
 })
 
+const { githubApiQuery } = require("./github-api")
+
 module.exports = {
   siteMetadata: {
     title: "Iamdevo",
@@ -14,6 +16,23 @@ module.exports = {
     "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        url: "https://api.github.com/graphql", // default Github GraphQL v4 API endpoint
+
+        // token: required by the GitHub API
+        token: process.env.GITHUB_ACCESS_TOKEN,
+
+        // GraphQLquery: defaults to a search query
+        graphQLQuery: githubApiQuery,
+
+        // variables: defaults to variables needed for a search query
+        variables: {
+          github_login: process.env.GITHUB_LOGIN,
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-mdx",
       options: {

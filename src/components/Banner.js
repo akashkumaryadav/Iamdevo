@@ -8,6 +8,7 @@ const banner = css`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   align-items: center;
   height: 60vh;
   background-size: cover;

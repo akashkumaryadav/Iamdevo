@@ -32,19 +32,21 @@ const Post = ({ data }) => {
               .body
           }
         </MDXRenderer>
+      </Mdxlayout>
+      <div className="container p-8 mx-auto">
         <Link
-          className="bg-blue-900 py-1 px-2 
+          className="bg-warning  py-2  px-4 
         text-center
-        text-white
-        rounded-sm
-        no-underline"
+        text-primary
+        rounded-full
+        no-underline mt-4"
           cover
           direction="right"
           to="/"
         >
           &larr; Home
         </Link>
-      </Mdxlayout>
+      </div>
     </Layout>
   )
 }

@@ -2,13 +2,14 @@ import React from "react"
 import Typewriter from "typewriter-effect"
 import { FadeIn } from "../utils/GsapAnimations"
 
+// TODO padding on on small screens
 const Skills = () => {
   return (
     <div className="p-8 mt-5">
-      <div className="container mx-auto p-8 ">
+      <div className="container mx-auto px-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl">SKills</h1>
-        <FadeIn>
-          <div className="grid grid-cols-4 gap-4  md:grid-cols-5  lg:grid-cols-7 m-5 md:p-10">
+        <FadeIn repeat={false}>
+          <div className="grid grid-cols-4 gap-4  md:grid-cols-5  lg:grid-cols-7  md:p-10">
             <img src="https://img.icons8.com/color/96/26e07f/vue-js.png" />
             <img src="https://img.icons8.com/color/96/26e07f/react-native.png" />
             <img src="https://img.icons8.com/windows/96/26e07f/nodejs.png" />
