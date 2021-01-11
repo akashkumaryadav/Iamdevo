@@ -5,7 +5,6 @@ import { FadeIn } from "../utils/GsapAnimations"
 
 const Blogs = () => {
   const posts = usePostsdata()
-  console.log(posts)
   return (
     <div className="container box-border mx-auto p-5 mt-5 bg-primary">
       <h1 className="text-3xl md:text-4xl lg:text-5xl m-5">Recent Posts</h1>

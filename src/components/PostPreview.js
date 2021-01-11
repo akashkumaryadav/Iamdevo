@@ -27,9 +27,9 @@ const PostPreview = ({ post }) => {
           <div className="uppercase tracking-wide text-sm text-danger font-semibold">
             <Link to={`/blogs/${post.slug}`}>{post.title}</Link>
           </div>
-          <a
+          <button
             href="#"
-            className=" mt-1 text-sm flex flex-wrap leading-tight font-medium text-primary space-x-1 space-y-1"
+            className=" mt-1 text-sm flex flex-wrap leading-tight font-medium text-primary space-x-1 space-y-1 hover:underline"
           >
             {tags.map((tag, index) => (
               <p
@@ -39,7 +39,7 @@ const PostPreview = ({ post }) => {
                 #{tag}
               </p>
             ))}{" "}
-          </a>
+          </button>
           <p className="mt-2 text-gray-500">{post.excerpt}</p>
         </div>
       </div>

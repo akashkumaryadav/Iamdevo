@@ -15,7 +15,7 @@ const Footer = () => {
             >
               <i className="fab fa-whatsapp text-succes text-green-300"></i>
             </a>
-            <a href="#">
+            <a href="/">
               <i className="fab fa-instagram text-red-500"></i>
             </a>
             <a

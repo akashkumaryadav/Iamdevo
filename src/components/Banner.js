@@ -25,10 +25,7 @@ const Banner = () => {
         id="banner-text"
         className="text-3xl md:text-4xl lg:text-5xl align-middle justify-center"
       >
-        <span
-          className="text-primaryText text-6xl"
-          style={{ fontFamily: "Pacifico" }}
-        >
+        <span className="text-6xl" style={{ fontFamily: "Pacifico" }}>
           I
         </span>
         <span id="banner-text-animated" className="text-warning">

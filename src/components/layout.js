@@ -11,11 +11,31 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* GLobal styles */}
-      {/*  Header section of the app  */}
+      {/* header section of the app  */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#de135b" />
+        <meta name="msapplication-TileColor" content="#b91d47" />
+        <meta name="theme-color" content="#080707" />
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -24,6 +44,8 @@ const Layout = ({ children }) => {
         ></link>
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
       </Helmet>
+      {/* endheader  */}
+      {/* app aria for rest of the app body section */}
       <div
         className={`${
           lightTheme ? "theme-lightest" : "theme-darkest"
@@ -32,6 +54,7 @@ const Layout = ({ children }) => {
         <AppMenu changeTheme={setLightTheme} currenttheme={lightTheme} />
         {children}
       </div>
+      {/* endaria  */}
     </>
   )
 }

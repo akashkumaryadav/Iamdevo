@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react"
-import { css, keyframes } from "@emotion/core"
-import { colors } from "tailwindcss/defaultTheme"
+import { css } from "@emotion/core"
 import { Link } from "gatsby"
+import React from "react"
 import Logo from "./Logo"
 
 const toglebutton = css`

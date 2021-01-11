@@ -82,15 +82,41 @@ module.exports = {
       },
     },
     //#endregion
-    //#region pwa configutration web manifesto
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     name: "iamdevo",
-    //     short_name: "iamdevo",
-    //     start_url: "/",
-    //     display: "standalone",
-    //   },
-    // },
+    //#region  configutration web manifest
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "iamdevo",
+        short_name: "iamdevo",
+        start_url: "/",
+        scope: "/",
+        display: "fullscreen",
+        theme_color: "#080707",
+        background_color: "#080707",
+        theme_color_in_head: false,
+        icon: "static/favicon/android-chrome-192x192.png",
+        cache_busting_mode: "none",
+        crossOrigin: `use-credentials`,
+        icons: [
+          {
+            src: "static/favicon/android-chrome-192x192.png",
+            type: "image/png",
+            sizes: "192x192",
+          },
+          {
+            src: "static/favicon/android-chrome-384x384.png",
+            type: "image/png",
+            sizes: "384x384",
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        precachePages: ["/blogs/*"],
+      },
+    },
+    //#endregion plugin offline for pwa
   ],
 }

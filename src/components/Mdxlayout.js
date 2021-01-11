@@ -6,7 +6,7 @@ import { colors } from "tailwindcss/defaultTheme"
 export function Mdxlayout({ children }) {
   return (
     <article
-      className="container mx-auto list-decimal p-2 md:px-8 text-primaryText text-md mt-24 space-y-10"
+      className="container mx-auto list-decimal p-2 md:px-8 text-primaryText text-md  space-y-10"
       css={css`
         h1 {
           font-size: xx-large;
