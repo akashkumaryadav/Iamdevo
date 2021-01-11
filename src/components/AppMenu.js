@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { css, keyframes } from "@emotion/core"
 import { colors } from "tailwindcss/defaultTheme"
 import { Link } from "gatsby"
+import Logo from "./Logo"
 
 const toglebutton = css`
   .toggle__dot {
@@ -22,16 +23,11 @@ const toglebutton = css`
 const AppMenu = ({ currenttheme, changeTheme }) => {
   return (
     <>
-      <nav className="fixed bg-black shadow-2xl block  w-full z-20 top-0">
-        <div className="container p-8 flex justify-between mx-auto">
-          <h1
-            className="text-3xl text-warning lg:text-4xl"
-            style={{
-              fontFamily: "Pacifico",
-            }}
-          >
-            <Link to="/"> AKY</Link>
-          </h1>
+      <nav className="fixed bg-black shadow-2xl block h-20  w-full z-20 top-0">
+        <div className="container p-8 my-0 py-0  flex justify-between mx-auto">
+          <Link to="/">
+            <Logo />
+          </Link>
           <div
             className="flex items-center justify-center float-left"
             css={toglebutton}

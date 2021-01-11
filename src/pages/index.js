@@ -18,7 +18,6 @@ export default () => {
       <Blogs />
       <Projects />
       <Skills />
-
       <About />
       <Footer />
     </Layout>

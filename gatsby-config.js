@@ -16,6 +16,7 @@ module.exports = {
     "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    //#region  sourcing the github for accessing github userdata
     {
       resolve: `gatsby-source-github-api`,
       options: {
@@ -33,6 +34,8 @@ module.exports = {
         },
       },
     },
+    //#endregion
+    //#region gtasby pugin-mdx
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -43,6 +46,8 @@ module.exports = {
         plugins: ["gatsby-remark-images"],
       },
     },
+    //#endregion
+    //#region sourcing local filesystem
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -50,6 +55,8 @@ module.exports = {
         path: `${__dirname}/src/pages/posts`,
       },
     },
+    //#endregion
+    //#region sourcing local filesystem for images
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -57,12 +64,16 @@ module.exports = {
         path: `${__dirname}/src/pages/images`,
       },
     },
+    //#endregion
+    //#region  sourcing dev for posts
     {
       resolve: "gatsby-source-dev",
       options: {
         username: "akashkumaryadav",
       },
     },
+    //#endregion
+    //#region sourcing conteful for blogs
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -70,5 +81,16 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
       },
     },
+    //#endregion
+    //#region pwa configutration web manifesto
+    // {
+    //   resolve: "gatsby-plugin-manifest",
+    //   options: {
+    //     name: "iamdevo",
+    //     short_name: "iamdevo",
+    //     start_url: "/",
+    //     display: "standalone",
+    //   },
+    // },
   ],
 }
