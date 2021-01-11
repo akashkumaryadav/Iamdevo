@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
     <>
       {/* header section of the app  */}
       <Helmet>
+        <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
 

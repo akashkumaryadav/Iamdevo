@@ -22,7 +22,7 @@ const About = () => {
               <section>
                 <p className="text-lg p-1  text-gray-500  md:text-xl lg:text-2xl">
                   My name is Akash Kumar Yadav currently pursuing Bachelor of
-                  Enginneringin Computer science and Internet Of Things
+                  Engineering in Computer science and Internet Of Things
                 </p>
               </section>
             </div>

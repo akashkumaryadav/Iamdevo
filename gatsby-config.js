@@ -94,7 +94,7 @@ module.exports = {
         theme_color: "#080707",
         background_color: "#080707",
         theme_color_in_head: false,
-        icon: "static/favicon/android-chrome-192x192.png",
+        icon: "static/favicon/icon512x512.png",
         cache_busting_mode: "none",
         crossOrigin: `use-credentials`,
         icons: [
@@ -104,11 +104,14 @@ module.exports = {
             sizes: "192x192",
           },
           {
-            src: "static/favicon/android-chrome-384x384.png",
+            src: "static/favicon/icon512x512.png",
             type: "image/png",
-            sizes: "384x384",
+            sizes: "512x512",
           },
         ],
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
     {

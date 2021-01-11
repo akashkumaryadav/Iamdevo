@@ -12,16 +12,18 @@ const Footer = () => {
               href="https://api.whatsapp.com/send/?phone=%2B918543064118&text&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="whatsapp"
             >
               <i className="fab fa-whatsapp text-succes text-green-300"></i>
             </a>
-            <a href="/">
+            <a href="/" aria-label="instagram">
               <i className="fab fa-instagram text-red-500"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/akash-yadav-a99323183"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="linkedin"
             >
               <i className="fab fa-linkedin text-blue-600"></i>
             </a>
@@ -29,6 +31,7 @@ const Footer = () => {
               href="https://www.hackerrank.com/AkashKumarYadav"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="hackerrank"
             >
               <i className="fab fa-hackerrank text-success"></i>
             </a>
@@ -45,11 +48,16 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl "
+              aria-label="tailwindcss"
             >
               www.tailwindcss.com
             </a>
             {/* icons moon  */}
-            <a href="https://icons8.com/icon/" className="text-2xl">
+            <a
+              href="https://icons8.com/icon/"
+              className="text-2xl"
+              aria-label="icons8"
+            >
               www.icons8.com
             </a>
             {/* fontawseome */}
@@ -58,6 +66,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl"
+              aria-label="fontawseome"
             >
               www.fontawseome.com
             </a>
@@ -67,18 +76,11 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl"
+              aria-label="unsplash"
             >
               www.unsplash.com
             </a>
             {/* unsplash */}
-            <a
-              href="https://fontawesome.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl"
-            >
-              www.fontawseome.com
-            </a>
           </section>
         </div>
         {/* //#endregion resources */}

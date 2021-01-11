@@ -1,8 +1,10 @@
+import styled from "@emotion/styled"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import React from "react"
-import { css } from "@emotion/core"
 import Typewriter from "typewriter-effect"
 
-const banner = css`
+const BannerImage = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
   background-size: cover;
@@ -19,8 +21,26 @@ const banner = css`
 `
 
 const Banner = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allImageSharp(
+        filter: { fluid: { originalName: { eq: "banner.jpeg" } } }
+      ) {
+        nodes {
+          id
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
-    <div className="bg-banner-image  text-white " css={banner}>
+    <BannerImage
+      fluid={data.allImageSharp.nodes[0].fluid}
+      alt="hero image"
+      className="text-white "
+    >
       <h1
         id="banner-text"
         className="text-3xl md:text-4xl lg:text-5xl align-middle justify-center"
@@ -38,7 +58,7 @@ const Banner = () => {
           />
         </span>
       </h1>
-    </div>
+    </BannerImage>
   )
 }
 

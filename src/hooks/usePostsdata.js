@@ -16,7 +16,7 @@ const usePostsdata = () => {
             }
             blogImage {
               fluid {
-                ...GatsbyContentfulFluid
+                ...GatsbyContentfulFluid_tracedSVG
               }
             }
           }
