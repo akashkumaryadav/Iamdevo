@@ -20,12 +20,34 @@ const BannerImage = styled(BackgroundImage)`
   font-family: "Poppins";
 `
 
+const BannerText = styled("div")`
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.15rem;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.9)
+  );
+  width: 100%;
+  height: 100%;
+  @media (max-width: 560px) {
+    flex-direction: column;
+  }
+`
+
 const Banner = () => {
   const data = useStaticQuery(graphql`
     {
-      allImageSharp(
-        filter: { fluid: { originalName: { eq: "banner.jpeg" } } }
-      ) {
+      allImageSharp(filter: { fluid: { originalName: { eq: "banner.jpg" } } }) {
         nodes {
           id
           fluid {
@@ -41,11 +63,8 @@ const Banner = () => {
       alt="hero image"
       className="text-white "
     >
-      <h1
-        id="banner-text"
-        className="text-3xl md:text-4xl lg:text-5xl align-middle justify-center"
-      >
-        <span className="text-6xl" style={{ fontFamily: "Pacifico" }}>
+      <BannerText className="text-3xl md:text-5xl lg:text-6xl">
+        <span className="mx-4" style={{ fontFamily: "Pacifico" }}>
           I
         </span>
         <span id="banner-text-animated" className="text-warning">
@@ -57,7 +76,7 @@ const Banner = () => {
             }}
           />
         </span>
-      </h1>
+      </BannerText>
     </BannerImage>
   )
 }
