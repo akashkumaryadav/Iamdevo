@@ -22,11 +22,12 @@ const toglebutton = css`
 const AppMenu = ({ currenttheme, changeTheme }) => {
   return (
     <>
-      <nav className="fixed bg-black shadow-2xl block h-20  w-full z-20 top-0">
-        <div className="container p-8 my-0 py-0  flex justify-between mx-auto">
+      <nav className="fixed bg-black shadow-2xl block h-20  w-full z-20 top-0 text-white">
+        <div className="container p-8 my-0 py-0  flex justify-between mx-auto items-center">
           <Link to="/">
             <Logo />
           </Link>
+
           <div
             className="flex items-center justify-center float-left"
             css={toglebutton}

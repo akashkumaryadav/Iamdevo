@@ -3,8 +3,8 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 
 const PostPreview = ({ post }) => {
-  const tags = post.tags.split(",")
-  tags.splice(0, tags.length / 2)
+  let tags = post.tags.split(",")
+  tags = tags.splice(0, 2)
   return (
     <div
       className={`max-w-md mx-auto bg-primary rounded-xl shadow-md overflow-hidden md:max-w-2xl`}
@@ -24,7 +24,7 @@ const PostPreview = ({ post }) => {
           </div>
           <button
             href="#"
-            className=" mt-1 text-sm flex flex-wrap leading-tight font-medium text-primary space-x-1 space-y-1 hover:underline"
+            className=" mt-1 text-sm flex flex-wrap leading-tight font-medium text-primary space-x-1 space-y-1 "
           >
             {tags.map((tag, index) => (
               <p
@@ -35,7 +35,7 @@ const PostPreview = ({ post }) => {
               </p>
             ))}{" "}
           </button>
-          <p className="mt-2 text-gray-500">{post.excerpt}</p>
+          <p className="mt-2 text-primaryText">{post.excerpt}</p>
         </div>
       </div>
     </div>

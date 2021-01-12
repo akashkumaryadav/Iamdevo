@@ -4,8 +4,8 @@ import { FadeIn } from "../utils/GsapAnimations"
 // TODO padding on on small screens
 const Skills = () => {
   return (
-    <div className="p-8 mt-5">
-      <div className="container mx-auto px-8">
+    <div className=" mt-5">
+      <div className="container mx-auto ">
         <h1 className="text-3xl md:text-4xl lg:text-5xl">SKills</h1>
         <FadeIn repeat={false}>
           <div className="grid grid-cols-4 gap-4  md:grid-cols-5  lg:grid-cols-7  md:p-10">

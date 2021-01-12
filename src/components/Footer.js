@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer className="shadow-2xl w-screen py-20">
+    <footer className="shadow-2xl bg-primary w-screen py-20">
       <div className="container mx-auto gap-x-10 grid grid-cols-1 md:grid-cols-2 w-full">
         {/* //#region social */}
         <div>

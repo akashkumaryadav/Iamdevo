@@ -4,15 +4,15 @@ import { FadeIn } from "../utils/GsapAnimations"
 const About = () => {
   return (
     <>
-      <div className="container mx-auto p-8 mt-5">
+      <div className="container mx-auto mt-5">
         <h1 className="text-3xl md:text-4xl lg:text-5xl">About Me</h1>
         <FadeIn repeat={false}>
           <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-1 mt-5 gap-y-0">
-            <div className="bg-primary  md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-1  ">
+            <div>
               <img
                 src="../../profileSample.png"
                 alt=""
-                className="rounded-lg md:rounded-tl-full md:rounded-bl-full h-full w-full shadow-2xl"
+                className="bg-primary rounded-lg md:rounded-tl-full md:rounded-bl-full h-full w-full shadow-2xl"
               />
             </div>
             <div
@@ -20,10 +20,29 @@ const About = () => {
             md:border-l-0  md:rounded-tr-full md:rounded-br-full flex  flex-col flex-wrap justify-center items-center"
             >
               <section>
-                <p className="text-lg p-1  text-gray-500  md:text-xl lg:text-2xl">
-                  My name is Akash Kumar Yadav currently pursuing Bachelor of
-                  Engineering in Computer science and Internet Of Things
-                </p>
+                <ul className="space-y-3 text-sm text-justify p-1  text-gray-500  md:text-lg lg:text-lg">
+                  <li>
+                    A detail oriented and multitasking professional with
+                    exceptional coding techniques having bachelor of engineering
+                    degree in computer science technology
+                  </li>
+                  <li>
+                    Comprehensive knowledge of primary development languages for
+                    instance Python, C++, JAVA,JavaScript and special talent of
+                    writing highly competent programs.
+                  </li>
+                  <li>
+                    Deep understanding regarding software development
+                    environments and considerable talent in achieving critical
+                    solutions.
+                  </li>
+                  <li>
+                    Able to understand and implement modern operating systems
+                    and great experience of their troubleshooting. Excellent in
+                    presenting and make people understand.
+                  </li>
+                </ul>
+                <span className="float-left text-lg p-2">~AkashKumarYadav</span>
               </section>
             </div>
           </div>

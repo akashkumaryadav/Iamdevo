@@ -1,13 +1,12 @@
 import React, { useState } from "react"
 import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/siteMetadata"
-
 import "../styles/main.css"
 import AppMenu from "./AppMenu"
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
-  const [lightTheme, setLightTheme] = useState(false)
+  const [lightTheme, setLightTheme] = useState(true)
 
   return (
     <>
@@ -47,12 +46,12 @@ const Layout = ({ children }) => {
       </Helmet>
       {/* endheader  */}
       {/* app aria for rest of the app body section */}
+      <AppMenu changeTheme={setLightTheme} currenttheme={lightTheme} />
       <div
         className={`${
           lightTheme ? "theme-lightest" : "theme-darkest"
-        } max-w-full   bg-primary text-primaryText`}
+        } max-w-full bg-banner-image text-primaryText p-2`}
       >
-        <AppMenu changeTheme={setLightTheme} currenttheme={lightTheme} />
         {children}
       </div>
       {/* endaria  */}

@@ -1,6 +1,5 @@
 import React from "react"
 import About from "../components/About"
-import Banner from "../components/Banner"
 import Footer from "../components/Footer"
 import Layout from "../components/layout"
 import Skills from "../components/Skills"
@@ -14,12 +13,13 @@ export default () => {
   return (
     // parent Base component to manage globel styling
     <Layout>
-      <Banner />
-      <Blogs />
-      <Projects />
-      <Skills />
-      <About />
-      <Footer />
+      <div className="mt-24  space-y-14">
+        <Blogs />
+        <Projects />
+        <Skills />
+        <About />
+        <Footer />
+      </div>
     </Layout>
   )
 }
